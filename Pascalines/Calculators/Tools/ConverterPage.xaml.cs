@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Pascalines.MyData;
+
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace Pascalines.Calculators.Tools
@@ -37,6 +39,7 @@ namespace Pascalines.Calculators.Tools
         /// session.  This will be null the first time a page is visited.</param>
         protected override void LoadState(Object navigationParameter, Dictionary<String, Object> pageState)
         {
+            this.DefaultViewModel["Item"] = (MyTileItem)navigationParameter;
         }
 
         /// <summary>

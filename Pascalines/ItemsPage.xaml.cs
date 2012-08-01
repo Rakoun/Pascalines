@@ -11,8 +11,12 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Pascalines.MyData;
 using Windows.UI.Popups;
+
+using Pascalines.MyData;
+using Pascalines.Calculators.Sale;
+using Pascalines.Calculators.Tools;
+
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
 
@@ -47,15 +51,26 @@ namespace Pascalines
 
         private async void itemListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var itemId = ((MyTileItem)e.ClickedItem).UniqueId;
+            var myItem = ((MyTileItem)e.ClickedItem);
 
-            switch (itemId)
+            switch (myItem.UniqueId)
             {
-                case "":
+                case "Calculer-Vente-PrixDeVente":
+                    {
+                        this.Frame.Navigate(typeof(SalePricePage), myItem);
+                    }
+                    break;
+                case "Calculer-Outils-Convertisseur":
+                    {
+                        this.Frame.Navigate(typeof(ConverterPage), myItem);
+                    }
                     break;
                 default:
                     {
-                        var messageDialog = new MessageDialog(string.Format("Impossible de trouver l'id {0}", itemId));
+                        var messageDialog =
+                            new MessageDialog(string.Format(
+                                        "Impossible de trouver l'id {0}", 
+                                        myItem.UniqueId));
                         await messageDialog.ShowAsync();
                     }
                     break;
