@@ -52,6 +52,7 @@ namespace Pascalines.Model.Tools
                 RaisePropertyChanged<decimal>(() => Percentage);
             }
         }
+
         private decimal _percentageValue;
         public decimal PercentageValue
         {
@@ -66,6 +67,7 @@ namespace Pascalines.Model.Tools
                 RaisePropertyChanged<decimal>(() => PercentageValue);
             }
         }
+
         private decimal _referenceAmount;
         public decimal ReferenceAmount
         {
@@ -95,6 +97,7 @@ namespace Pascalines.Model.Tools
                 RaisePropertyChanged<decimal>(() => PercentVAT);
             }
         }
+
         private decimal _valueVAT; // valeur TVA
         public decimal ValueVAT
         {
@@ -111,13 +114,94 @@ namespace Pascalines.Model.Tools
         }
 
         private decimal _allTaxesExcluded; // HT
+        public decimal AllTaxesExcluded
+        {
+            get
+            {
+                return _allTaxesExcluded;
+            }
+            set
+            {
+                if (_allTaxesExcluded == value) return;
+                _allTaxesExcluded = value;
+                RaisePropertyChanged<decimal>(() => AllTaxesExcluded);
+            }
+        }
+
         private decimal _inclusiveOfTaxes; // TTC
+        public decimal InclusiveOfTaxes
+        {
+            get
+            {
+                return _inclusiveOfTaxes;
+            }
+            set
+            {
+                if (_inclusiveOfTaxes == value) return;
+                _inclusiveOfTaxes = value;
+                RaisePropertyChanged<decimal>(() => InclusiveOfTaxes);
+            }
+        }
 
         private decimal _markupRage; // TM (taux de marque)
+        public decimal MarkupRage
+        {
+            get
+            {
+                return _markupRage;
+            }
+            set
+            {
+                if (_markupRage == value) return;
+                _markupRage = value;
+                RaisePropertyChanged<decimal>(() => MarkupRage);
+            }
+        }
+
         private decimal _k;
+        public decimal K
+        {
+            get
+            {
+                return _k;
+            }
+            set
+            {
+                if (_k == value) return;
+                _k = value;
+                RaisePropertyChanged<decimal>(() => K);
+            }
+        }
 
         private decimal _crudeProfit; // Marge brute
+        public decimal CrudeProfit
+        {
+            get
+            {
+                return _crudeProfit;
+            }
+            set
+            {
+                if (_crudeProfit == value) return;
+                _crudeProfit = value;
+                RaisePropertyChanged<decimal>(() => CrudeProfit);
+            }
+        }
+
         private decimal _sellingPriceAllTaxeExcluded; // prix de vente HT
+        public decimal SellingPriceAllTaxeExcluded
+        {
+            get
+            {
+                return _sellingPriceAllTaxeExcluded;
+            }
+            set
+            {
+                if (_sellingPriceAllTaxeExcluded == value) return;
+                _sellingPriceAllTaxeExcluded = value;
+                RaisePropertyChanged<decimal>(() => SellingPriceAllTaxeExcluded);
+            }
+        }
 
     }
 }
