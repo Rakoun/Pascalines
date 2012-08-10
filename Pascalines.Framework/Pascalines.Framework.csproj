@@ -100,9 +100,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Commandes\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Messages\DialogService.cs" />
+    <Compile Include="Messages\IDialogService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
