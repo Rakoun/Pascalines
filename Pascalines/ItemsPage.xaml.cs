@@ -14,8 +14,8 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI.Popups;
 
 using Pascalines.MyData;
-using Pascalines.Calculators.Sale;
-using Pascalines.Calculators.Tools;
+using Pascalines.Views;
+using Pascalines.Views.Tools;
 
 
 // The Items Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234233
@@ -57,7 +57,10 @@ namespace Pascalines
             {
                 case "Calculer-Vente-PrixDeVente":
                     {
-                        this.Frame.Navigate(typeof(SalePricePage), myItem);
+                        //this.Frame.Navigate(typeof(SalePricePage), myItem);
+                        var messageDialog =
+                            new MessageDialog("Pas implémenté");
+                        await messageDialog.ShowAsync();
                     }
                     break;
                 case "Calculer-Outils-Convertisseur":
@@ -69,7 +72,7 @@ namespace Pascalines
                     {
                         var messageDialog =
                             new MessageDialog(string.Format(
-                                        "Impossible de trouver l'id {0}", 
+                                        "Impossible de trouver l'id {0}",
                                         myItem.UniqueId));
                         await messageDialog.ShowAsync();
                     }

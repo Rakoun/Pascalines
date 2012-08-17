@@ -16,6 +16,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Pascalines.ViewModels;
+using Pascalines.ViewModels.Tools;
+
 // The Grid App template is documented at http://go.microsoft.com/fwlink/?LinkId=234226
 
 namespace Pascalines
@@ -43,6 +46,7 @@ namespace Pascalines
         /// <param name="args">Details about the launch request and process.</param>
         protected override async void OnLaunched(LaunchActivatedEventArgs args)
         {
+            ViewModelLocator.RegisterViewModel<ConverterViewModel>(new ConverterViewModel());
             // Do not repeat app initialization when already running, just ensure that
             // the window is active
             if (args.PreviousExecutionState == ApplicationExecutionState.Running)

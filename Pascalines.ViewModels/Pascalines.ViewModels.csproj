@@ -100,6 +100,14 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\Pascaline.Services\Pascalines.Services.csproj">
+      <Project>{d18fe34f-8ea7-4771-8acd-33e0eca1e8af}</Project>
+      <Name>Pascalines.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pascalines.Framework\Pascalines.Framework.csproj">
+      <Project>{1dad4b6f-3626-4bf3-af95-6e1244478d16}</Project>
+      <Name>Pascalines.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bases\BaseObserved.cs" />

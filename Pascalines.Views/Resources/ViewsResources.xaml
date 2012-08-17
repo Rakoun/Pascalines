@@ -1,0 +1,11 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModel="using:Pascalines.ViewModels">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="../Common/StandardStyles.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    <viewModel:ViewModelLocator x:Key="ViewModelLocator"/>
+</ResourceDictionary>
+

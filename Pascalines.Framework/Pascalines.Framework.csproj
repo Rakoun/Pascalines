@@ -106,12 +106,6 @@
     <Compile Include="Messages\IDialogService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Pascalines.ViewModels\Pascalines.ViewModels.csproj">
-      <Project>{d91c0212-bbf0-4cb6-b7c9-cbca5f665b71}</Project>
-      <Name>Pascalines.ViewModels</Name>
-    </ProjectReference>
-  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>
   </PropertyGroup>

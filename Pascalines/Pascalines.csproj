@@ -101,17 +101,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Calculators\Purchase\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Calculators\Sale\SalePricePage.xaml.cs">
-      <DependentUpon>SalePricePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Calculators\Tools\ConverterPage.xaml.cs">
-      <DependentUpon>ConverterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="GroupedItemsPage.xaml.cs">
       <DependentUpon>GroupedItemsPage.xaml</DependentUpon>
@@ -144,14 +137,6 @@
     <Content Include="Assets\LightGray.png" />
     <Content Include="Assets\MediumGray.png" />
     <Content Include="Assets\DarkGray.png" />
-    <Page Include="Calculators\Sale\SalePricePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Calculators\Tools\ConverterPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ItemsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +155,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pascalines.ViewModels\Pascalines.ViewModels.csproj">
+      <Project>{d91c0212-bbf0-4cb6-b7c9-cbca5f665b71}</Project>
+      <Name>Pascalines.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pascalines.Views\Pascalines.Views.csproj">
+      <Project>{d5b5a054-21fa-4e33-a38d-9af08e924011}</Project>
+      <Name>Pascalines.Views</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

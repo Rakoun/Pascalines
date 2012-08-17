@@ -1,16 +1,16 @@
 ﻿<common:LayoutAwarePage
     x:Name="pageRoot"
-    x:Class="Pascalines.Calculators.Tools.ConverterPage"
+    x:Class="Pascalines.Views.Tools.ConverterPage"
     DataContext="{Binding [ConverterViewModel], Source={StaticResource ViewModelLocator}}"
     IsTabStop="false"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Pascalines.Calculators.Tools"
-    xmlns:common="using:Pascalines.Common"
+    xmlns:local="using:Pascalines.Views.Tools"
+    xmlns:common="using:Pascalines.Views.Common"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <!-- DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"-->
+    <!--DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"-->
 
     <Page.Resources>
 
@@ -36,24 +36,9 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <!--<TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>-->
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding Item.Title}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
-        
-        <!-- Contenu de la calculatrice -->
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
-            <TextBox Text="{Binding CalculatorName}"/>
-        </Grid>
-        
-        
+
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->
