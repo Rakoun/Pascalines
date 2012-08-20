@@ -26,7 +26,6 @@ namespace Pascalines.Views.Tools
     {
         public ConverterPage()
         {
-            ViewModelLocator.RegisterViewModel<ConverterViewModel>(new ConverterViewModel());
             this.InitializeComponent();
         }
 
