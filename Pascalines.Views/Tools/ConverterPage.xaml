@@ -36,9 +36,47 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
+            <!--<TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>-->
+            <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{Binding CalculatorName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 
+        <!-- Contenu de la calculatrice -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding CalculationLineLabel}" Grid.ColumnSpan="5"/>
+            <TextBox Text="{Binding CalculationLine}" Grid.ColumnSpan="5" Grid.Row="1"/>
+            <Button Content="{Binding BtEqualLabel}" Grid.Column="5" Grid.Row="1"/>
+            <TextBox Text="{Binding CalculationLineResult}" Grid.Column="6"  Grid.Row="1"/>
+            <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="1"/>
+            
+            <Rectangle Grid.Row="2" Fill="Blue" Grid.ColumnSpan="8"/>
+            <Rectangle Grid.Row="5" Fill="Blue" Grid.ColumnSpan="8"/>
+            <Rectangle Grid.Row="8" Fill="Blue" Grid.ColumnSpan="8"/>
+        </Grid>
+
+                
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->

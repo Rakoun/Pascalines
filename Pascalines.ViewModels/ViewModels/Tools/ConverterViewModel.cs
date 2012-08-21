@@ -37,7 +37,22 @@ namespace Pascalines.ViewModels.Tools
             get { return "Convertisseur"; }//TODO: à globaliser
         }
 
+        public string BtEqualLabel
+        {
+            get { return "="; }//TODO: à globaliser
+        }
+
+        public string BtnCleanLabel
+        {
+            get { return "Effacer"; }//TODO: à globaliser
+        }
+
+        public string CalculationLineLabel
+        {
+            get { return "Ligne de calcul"; }//TODO: à globaliser
+        }
         public string CalculationLine { get; set; }
+        public string CalculationLineResult { get; set; }
 
 
         #endregion //Elements d'affichage
