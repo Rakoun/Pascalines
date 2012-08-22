@@ -37,6 +37,7 @@ namespace Pascalines.ViewModels.Tools
             get { return "Convertisseur"; }//TODO: à globaliser
         }
 
+        // Première ligne
         public string BtEqualLabel
         {
             get { return "="; }//TODO: à globaliser
@@ -53,6 +54,33 @@ namespace Pascalines.ViewModels.Tools
         }
         public string CalculationLine { get; set; }
         public string CalculationLineResult { get; set; }
+
+        // Deuxième ligne
+        public string OrLabel
+        {
+            get { return "ou"; }//TODO: à globaliser
+        }
+        public string PercentageLabel
+        {
+            get { return "%"; }//TODO: à globaliser
+        }
+        public string Percentage { get; set; }
+
+        public string PercentageValueLabel
+        {
+            get { return "Valeur"; }//TODO: à globaliser
+        }
+        public string PercentageValue { get; set; }
+
+        public string ReferenceAmountLabel
+        {
+            get { return "Mt de Référence"; }//TODO: à globaliser
+        }
+        public string ReferenceAmount { get; set; }
+
+
+
+
 
 
         #endregion //Elements d'affichage
