@@ -143,18 +143,18 @@ namespace Pascalines.Model.Tools
             }
         }
 
-        private decimal _markupRage; // TM (taux de marque)
-        public decimal MarkupRage
+        private decimal _markupRate; // TM (taux de marque)
+        public decimal MarkupRate
         {
             get
             {
-                return _markupRage;
+                return _markupRate;
             }
             set
             {
-                if (_markupRage == value) return;
-                _markupRage = value;
-                RaisePropertyChanged<decimal>(() => MarkupRage);
+                if (_markupRate == value) return;
+                _markupRate = value;
+                RaisePropertyChanged<decimal>(() => MarkupRate);
             }
         }
 

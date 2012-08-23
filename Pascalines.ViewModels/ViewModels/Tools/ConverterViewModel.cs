@@ -53,7 +53,7 @@ namespace Pascalines.ViewModels.Tools
             get { return "Ligne de calcul"; }//TODO: à globaliser
         }
         public string CalculationLine { get; set; }
-        public string CalculationLineResult { get; set; }
+        public decimal CalculationLineResult { get; set; }
 
         // Deuxième ligne
         public string OrLabel
@@ -64,19 +64,74 @@ namespace Pascalines.ViewModels.Tools
         {
             get { return "%"; }//TODO: à globaliser
         }
-        public string Percentage { get; set; }
+        public decimal Percentage { get; set; }
 
         public string PercentageValueLabel
         {
             get { return "Valeur"; }//TODO: à globaliser
         }
-        public string PercentageValue { get; set; }
+        public decimal PercentageValue { get; set; }
 
         public string ReferenceAmountLabel
         {
             get { return "Mt de Référence"; }//TODO: à globaliser
         }
-        public string ReferenceAmount { get; set; }
+        public decimal ReferenceAmount { get; set; }
+
+        // Troisième ligne
+        public string AndLabel
+        {
+            get { return "et"; }//TODO: à globaliser
+        }
+        public string PercentVATLabel
+        {
+            get { return "% TVA"; }//TODO: à globaliser
+        }
+        public decimal Percent { get; set; }
+
+        public string ValueVATLabel
+        {
+            get { return "Valeur"; }//TODO: à globaliser
+        }
+        public decimal ValueVAT { get; set; }
+
+        public string AllTaxesExcludedLabel
+        {
+            get { return "Valeur HT"; }//TODO: à globaliser
+        }
+        public decimal AllTaxesExlcuded { get; set; }
+
+        public string InclusiveOfTaxesLabel
+        {
+            get { return "Valeur TTC"; }//TODO: à globaliser
+        }
+        public decimal InclusiveOfTaxes { get; set; }
+
+        //Quatrième ligne
+        public string MarkupRateLabel
+        {
+            get { return "TM"; }//TODO: à globaliser
+        }
+        public decimal MarkupRate { get; set; }
+
+        public string KLabel
+        {
+            get { return "K"; }//TODO: à globaliser
+        }
+        public decimal K { get; set; }
+
+        public string CrudeProfitLabel
+        {
+            get { return "Mb"; }//TODO: à globaliser
+        }
+        public decimal CrudeProfit { get; set; }
+
+        public string SellingPriceAllTaxeExcludedLabel
+        {
+            get { return "PV HT"; }//TODO: à globaliser
+        }
+        public decimal SellingPriceAllTaxeExcluded { get; set; }
+
 
 
 
