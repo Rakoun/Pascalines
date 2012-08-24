@@ -66,47 +66,47 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 			<!-- Première ligne -->
-            <TextBlock Text="{Binding CalculationLineLabel}" Grid.ColumnSpan="5"/>
+            <TextBlock Text="{Binding CalculationLineLabel}" Grid.ColumnSpan="5" Style="{StaticResource BasicTextStyle}"/>
             <TextBox Text="{Binding CalculationLine}" Grid.ColumnSpan="5" Grid.Row="1"/>
-            <Button Content="{Binding BtEqualLabel}" Grid.Column="5" Grid.Row="1" />
+            <Button Content="{Binding BtEqualLabel}" Grid.Column="5" Grid.Row="0" Grid.RowSpan="2"/>
             <TextBox Text="{Binding CalculationLineResult}" Grid.Column="6"  Grid.Row="1"/>
-            <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="1"/>
+            <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="0" Grid.RowSpan="2"/>
             
             <Rectangle Grid.Row="2" Fill="Blue" Grid.ColumnSpan="8"/>
 
 			<!-- Deuxième ligne -->
-			<TextBlock Text="{Binding PercentageLabel}" Grid.Row="3"/>
+			<TextBlock Text="{Binding PercentageLabel}" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
 			<TextBox Text="{Binding Percentage}" Grid.Row="4"/>
 			
-			<TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="4" />
-			<TextBlock Text="{Binding PercentageValueLabel}" Grid.Column="2" Grid.Row="3"/>
+			<TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="4" Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding PercentageValueLabel}" Grid.Column="2" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
 			<TextBox Text="{Binding PercentageValue}" Grid.Column="2" Grid.Row="4"/>
 
-			<TextBlock Text="{Binding OrLabel}" Grid.Column="3" Grid.Row="4" />
-			<TextBlock Text="{Binding ReferenceAmountLabel}" Grid.Column="4" Grid.Row="3"/>
+            <TextBlock Text="{Binding OrLabel}" Grid.Column="3" Grid.Row="4"  Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding ReferenceAmountLabel}" Grid.Column="4" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
 			<TextBox Text="{Binding ReferenceAmount}" Grid.Column="4" Grid.Row="4"/>
 
-			<Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="4" Grid.RowSpan="2"/>
+			<Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="3" Grid.RowSpan="2"/>
 
             <Rectangle Grid.Row="5" Fill="Blue" Grid.ColumnSpan="8"/>
             
             <!-- Troisième ligne -->
-            <TextBlock Text="{Binding PercentVATLabel}" Grid.Row="6"/>
+            <TextBlock Text="{Binding PercentVATLabel}" Grid.Row="6" Style="{StaticResource BasicTextStyle}"/>
             <TextBox Text="{Binding Percent}" Grid.Row="7"/>
 
-            <TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="7" />
-            <TextBlock Text="{Binding ValueVATLabel}" Grid.Column="2" Grid.Row="6"/>
+            <TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="7" Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding ValueVATLabel}" Grid.Column="2" Grid.Row="6" Style="{StaticResource BasicTextStyle}"/>
             <TextBox Text="{Binding ValueVAT}" Grid.Column="2" Grid.Row="7"/>
 
-            <TextBlock Text="{Binding AndLabel}" Grid.Column="3" Grid.Row="7" />
-            <TextBlock Text="{Binding AllTaxesExcludedLabel}" Grid.Column="4" Grid.Row="6"/>
+            <TextBlock Text="{Binding AndLabel}" Grid.Column="3" Grid.Row="7" Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding AllTaxesExcludedLabel}" Grid.Column="4" Grid.Row="6" Style="{StaticResource BasicTextStyle}"/>
             <TextBox Text="{Binding AllTaxesExcluded}" Grid.Column="4" Grid.Row="7"/>
 
-            <TextBlock Text="{Binding OrLabel}" Grid.Column="5" Grid.Row="7" />
-            <TextBlock Text="{Binding InclusiveOfTaxesLabel}" Grid.Column="4" Grid.Row="6"/>
-            <TextBox Text="{Binding InclusiveOfTaxes}" Grid.Column="4" Grid.Row="7"/>
+            <TextBlock Text="{Binding OrLabel}" Grid.Column="5" Grid.Row="7" Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding InclusiveOfTaxesLabel}" Grid.Column="6" Grid.Row="6" Style="{StaticResource BasicTextStyle}"/>
+            <TextBox Text="{Binding InclusiveOfTaxes}" Grid.Column="6" Grid.Row="7"/>
 
-            <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="7" Grid.RowSpan="2"/>
+            <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="6" Grid.RowSpan="2"/>
                         
             <Rectangle Grid.Row="8" Fill="Blue" Grid.ColumnSpan="8"/>
             
@@ -114,19 +114,19 @@
             <TextBlock Text="{Binding MarkupRateLabel}" Grid.Row="9"/>
             <TextBox Text="{Binding MarkupRate}" Grid.Row="10"/>
 
-            <TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="10" />
-            <TextBlock Text="{Binding KLabel}" Grid.Column="2" Grid.Row="9"/>
+            <TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="10" Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding KLabel}" Grid.Column="2" Grid.Row="9" Style="{StaticResource BasicTextStyle}"/>
             <TextBox Text="{Binding K}" Grid.Column="2" Grid.Row="10"/>
 
-            <TextBlock Text="{Binding AndLabel}" Grid.Column="3" Grid.Row="10" />
-            <TextBlock Text="{Binding CrudeProfitLabel}" Grid.Column="4" Grid.Row="9"/>
+            <TextBlock Text="{Binding AndLabel}" Grid.Column="3" Grid.Row="10" Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding CrudeProfitLabel}" Grid.Column="4" Grid.Row="9" Style="{StaticResource BasicTextStyle}"/>
             <TextBox Text="{Binding CrudeProfit}" Grid.Column="4" Grid.Row="10"/>
 
-            <TextBlock Text="{Binding OrLabel}" Grid.Column="5" Grid.Row="10" />
-            <TextBlock Text="{Binding SellingPriceAllTaxeExcludedLabel}" Grid.Column="4" Grid.Row="9"/>
-            <TextBox Text="{Binding SellingPriceAllTaxeExcluded}" Grid.Column="4" Grid.Row="10"/>
+            <TextBlock Text="{Binding OrLabel}" Grid.Column="5" Grid.Row="10" Style="{StaticResource BasicTextStyle}"/>
+            <TextBlock Text="{Binding SellingPriceAllTaxeExcludedLabel}" Grid.Column="6" Grid.Row="9" Style="{StaticResource BasicTextStyle}"/>
+            <TextBox Text="{Binding SellingPriceAllTaxeExcluded}" Grid.Column="6" Grid.Row="10"/>
 
-            <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="10" Grid.RowSpan="2"/>
+            <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="9" Grid.RowSpan="2"/>
 
                     
         </Grid>
