@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Pascalines.Framework;
 using Pascalines.Services;
 
+//TODO: il faudra utiliser un IMultiValueConverter et tout sera ok!
 
 namespace Pascalines.ViewModels.Tools
 {
@@ -64,18 +65,31 @@ namespace Pascalines.ViewModels.Tools
         {
             get { return "%"; }//TODO: à globaliser
         }
-        public decimal Percentage { get; set; }
+        /// <summary>
+        /// Percentage = (PercentageValue * 100) / ReferenceAmount
+        /// </summary>
+        public decimal Percentage
+        {
+            get { return 100 * PercentageValue; }
+            set { this.Percentage = value; }
+        }
 
         public string PercentageValueLabel
         {
             get { return "Valeur"; }//TODO: à globaliser
         }
+        /// <summary>
+        /// PercentageValue = (ReferenceAmount * Percentage) / 100
+        /// </summary>
         public decimal PercentageValue { get; set; }
 
         public string ReferenceAmountLabel
         {
             get { return "Mt de Référence"; }//TODO: à globaliser
         }
+        /// <summary>
+        /// ReferenceAmount = (PercentageValue * 100) / Percentage
+        /// </summary>
         public decimal ReferenceAmount { get; set; }
 
         // Troisième ligne
