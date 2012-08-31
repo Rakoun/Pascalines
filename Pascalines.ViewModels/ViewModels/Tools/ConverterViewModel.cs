@@ -68,11 +68,7 @@ namespace Pascalines.ViewModels.Tools
         /// <summary>
         /// Percentage = (PercentageValue * 100) / ReferenceAmount
         /// </summary>
-        public decimal Percentage
-        {
-            get { return 100 * PercentageValue; }
-            set { this.Percentage = value; }
-        }
+        public decimal Percentage {get;set;}
 
         public string PercentageValueLabel
         {

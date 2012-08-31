@@ -76,7 +76,7 @@
 
 			<!-- Deuxième ligne -->
 			<TextBlock Text="{Binding PercentageLabel}" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
-			<TextBox Text="{Binding Percentage}" Grid.Row="4"/>
+			<TextBox Text="{Binding Percentage}" Grid.Row="4" />
 			
 			<TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="4" Style="{StaticResource BasicTextStyle}"/>
             <TextBlock Text="{Binding PercentageValueLabel}" Grid.Column="2" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
