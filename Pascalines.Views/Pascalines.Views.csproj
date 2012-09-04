@@ -112,6 +112,7 @@
     <Compile Include="Common\LayoutAwarePage.cs" />
     <Compile Include="Common\RichTextColumns.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="Converters\BindingUtil.cs" />
     <Compile Include="Converters\IMultiValueConverter.cs" />
     <Compile Include="Converters\MultiBinding.cs" />
     <Compile Include="Converters\MultiBindings.cs" />
