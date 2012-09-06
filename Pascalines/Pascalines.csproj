@@ -161,9 +161,9 @@
       <Project>{d91c0212-bbf0-4cb6-b7c9-cbca5f665b71}</Project>
       <Name>Pascalines.ViewModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Pascalines.Views\Pascalines.Views.csproj">
+    <ProjectReference Include="..\Pascalines.Views\Pascalines_Views.csproj">
       <Project>{d5b5a054-21fa-4e33-a38d-9af08e924011}</Project>
-      <Name>Pascalines.Views</Name>
+      <Name>Pascalines_Views</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">

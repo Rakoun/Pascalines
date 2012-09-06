@@ -7,6 +7,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Pascalines.Views.Tools"
     xmlns:common="using:Pascalines.Views.Common"
+    xmlns:multibinding="using:SLMultiBinding"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
@@ -16,6 +17,7 @@
 
         <!-- TODO: Delete this line if the key AppName is declared in App.xaml -->
         <x:String x:Key="AppName">My Application</x:String>
+        <multibinding:PercentageConverter x:Key="PercentageConverter"/>
     </Page.Resources>
 
     <!--
@@ -23,6 +25,7 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
+    
     <Grid Style="{StaticResource LayoutRootStyle}">
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
@@ -76,15 +79,29 @@
 
 			<!-- Deuxième ligne -->
 			<TextBlock Text="{Binding PercentageLabel}" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
-			<TextBox Text="{Binding Percentage}" Grid.Row="4" />
-			
-			<TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="4" Style="{StaticResource BasicTextStyle}"/>
+			<!--<TextBox Text="{Binding Percentage}" Grid.Row="4" />-->
+            <TextBox Grid.Row="4">
+                <multibinding:BindingUtil.MultiBindings>
+                    <multibinding:MultiBindings>
+                        <multibinding:MultiBinding TargetProperty="Text" Converter="{StaticResource PercentageConverter}">
+                            <multibinding:MultiBinding.Bindings>
+                                <multibinding:BindingCollection>
+                                    <Binding Path="PercentageValue"/>
+                                    <Binding Path="ReferenceAmount"/>
+                                </multibinding:BindingCollection>
+                            </multibinding:MultiBinding.Bindings>
+                        </multibinding:MultiBinding>
+                    </multibinding:MultiBindings>
+                </multibinding:BindingUtil.MultiBindings>
+            </TextBox>
+
+            <TextBlock Text="{Binding OrLabel}" Grid.Column="1" Grid.Row="4" Style="{StaticResource BasicTextStyle}"/>
             <TextBlock Text="{Binding PercentageValueLabel}" Grid.Column="2" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
-			<TextBox Text="{Binding PercentageValue}" Grid.Column="2" Grid.Row="4"/>
+			<TextBox Text="{Binding Path=PercentageValue, Mode=TwoWay}" Grid.Column="2" Grid.Row="4"/>
 
             <TextBlock Text="{Binding OrLabel}" Grid.Column="3" Grid.Row="4"  Style="{StaticResource BasicTextStyle}"/>
             <TextBlock Text="{Binding ReferenceAmountLabel}" Grid.Column="4" Grid.Row="3" Style="{StaticResource BasicTextStyle}"/>
-			<TextBox Text="{Binding ReferenceAmount}" Grid.Column="4" Grid.Row="4"/>
+			<TextBox Text="{Binding Path=ReferenceAmount, Mode=TwoWay}" Grid.Column="4" Grid.Row="4"/>
 
 			<Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="3" Grid.RowSpan="2"/>
 
@@ -128,7 +145,7 @@
 
             <Button Content="{Binding BtnCleanLabel}" Grid.Column="7" Grid.Row="9" Grid.RowSpan="2"/>
 
-                    
+
         </Grid>
 
                 
@@ -162,4 +179,5 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
     </Grid>
+    
 </common:LayoutAwarePage>

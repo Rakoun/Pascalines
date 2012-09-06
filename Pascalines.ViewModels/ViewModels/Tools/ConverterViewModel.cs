@@ -68,7 +68,21 @@ namespace Pascalines.ViewModels.Tools
         /// <summary>
         /// Percentage = (PercentageValue * 100) / ReferenceAmount
         /// </summary>
-        public decimal Percentage {get;set;}
+        //public decimal Percentage {get;set;}
+        private decimal _percentage = 100;
+
+        public decimal Percentage
+        {
+            get { return _percentage; }
+            set
+            {
+                if (_percentage == value) return;
+
+                _percentage = value;
+                RaisePropertyChanged<decimal>(() => Percentage);
+            }
+        }
+
 
         public string PercentageValueLabel
         {
@@ -77,7 +91,19 @@ namespace Pascalines.ViewModels.Tools
         /// <summary>
         /// PercentageValue = (ReferenceAmount * Percentage) / 100
         /// </summary>
-        public decimal PercentageValue { get; set; }
+        //public decimal PercentageValue { get; set; }
+        private decimal _percentageValue = 0;
+
+        public decimal PercentageValue
+        {
+            get { return _percentageValue; }
+            set
+            {
+                if (_percentage == value) return;
+                _percentageValue = value;
+                RaisePropertyChanged<decimal>(() => PercentageValue);
+            }
+        }
 
         public string ReferenceAmountLabel
         {
@@ -86,7 +112,18 @@ namespace Pascalines.ViewModels.Tools
         /// <summary>
         /// ReferenceAmount = (PercentageValue * 100) / Percentage
         /// </summary>
-        public decimal ReferenceAmount { get; set; }
+        //public decimal ReferenceAmount { get; set; }
+        private decimal _referenceAmount;
+        public decimal ReferenceAmount
+        {
+            get { return _referenceAmount; }
+            set
+            {
+                if (_referenceAmount == value) return;
+                _referenceAmount = value;
+                RaisePropertyChanged<decimal>(() => ReferenceAmount);
+            }
+        }
 
         // Troisième ligne
         public string AndLabel

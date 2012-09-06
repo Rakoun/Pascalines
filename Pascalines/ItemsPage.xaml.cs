@@ -65,7 +65,8 @@ namespace Pascalines
                     break;
                 case "Calculer-Outils-Convertisseur":
                     {
-                        this.Frame.Navigate(typeof(ConverterPage), myItem);
+                        //this.Frame.Navigate(typeof(ConverterPage), myItem);
+                        this.Frame.Navigate((typeof(ConverterPage)));
                     }
                     break;
                 default:
